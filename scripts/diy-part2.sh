@@ -32,17 +32,8 @@ rm -rf ../lean/luci-app-kodexplorer
 # Add immortalwrt's Packages
 git clone --depth=1 -b openwrt-18.06 https://github.com/immortalwrt/packages
 git clone --depth=1 -b openwrt-18.06-k5.4 https://github.com/immortalwrt/luci
-cp -r ../luci/applications/luci-app-adguardhome ../package/lean//luci-app-adguardhome
 
-# Add luci-app-passwall
-git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall
 
-# Add luci-app-vssr <M>
-git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb.git
-git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr
-
-# Add luci-proto-minieap
-git clone --depth=1 https://github.com/ysc3839/luci-proto-minieap
 
 # Add ServerChan
 git clone --depth=1 https://github.com/tty228/luci-app-serverchan
@@ -68,8 +59,6 @@ git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-ap
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
 rm -rf ../lean/luci-theme-argon
 
-# Add subconverter
-git clone --depth=1 https://github.com/tindy2013/openwrt-subconverter
 
 # Add luci-udptools
 svn co https://github.com/zcy85611/Openwrt-Package/trunk/luci-udptools
