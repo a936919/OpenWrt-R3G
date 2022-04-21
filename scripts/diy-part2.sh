@@ -95,6 +95,10 @@ sed -i 's/"UPnP"/"UPnP 设置"/g' `grep "UPnP" -rl ./`
 sed -i 's/\/bin\/ash/\/usr\/bin\/zsh/g' package/base-files/files/etc/passwd
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' ./feeds/luci/collections/luci/Makefile
 sed -i '/CYXluq4wUazHjmCDBCqXF/d' package/lean/default-settings/files/zzz-default-settings 
-
+# 修改默认Wi-Fi名称
+sed -i "2i uci set wireless.@wifi-iface[0].ssid=Xiaomi_R3G" ./package/lean/default-settings/files/zzz-default-settings
+sed -i "3i uci set wireless.@wifi-iface[1].ssid=Xiaomi_R3G_5G" ./package/lean/default-settings/files/zzz-default-settings
+sed -i "4i uci commit wireless" ./package/lean/default-settings/files/zzz-default-settings
+sed -i "5i wifi\n" ./package/lean/default-settings/files/zzz-default-settings
 ./scripts/feeds update -a
 ./scripts/feeds install -a
